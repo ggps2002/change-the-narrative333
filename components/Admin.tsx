@@ -54,10 +54,11 @@ type BlogFormData = {
 
 const Admin = () => {
   const router = useRouter();
+  const [loading, setLoading] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [deletingPostId, setDeletingPostId] = useState<string | null>(null);
-  const { posts, addPost, updatePost, deletePost } =
+  const { posts, loadingBlog, addPost, updatePost, deletePost } =
     useAdminBlog();
   const [content, setContent] = useState("");
   const [editingPostId, setEditingPostId] = useState<string | null>(null);
@@ -86,8 +87,10 @@ const Admin = () => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       if (!user) {
         router.push('/login');
-      } else (user.email !== 'admin@changethenarrative333.org') {
+      } else if (user.email !== 'admin@changethenarrative333.org') {
         router.push('/dashboard');
+      } else {
+        setLoading(false); // ✅ Admin verified
       }
     });
 
