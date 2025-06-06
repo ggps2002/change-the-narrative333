@@ -1,9 +1,9 @@
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "@/lib/firebase/utils";
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import { Calendar, Tag, User } from "lucide-react";
 import { format } from "date-fns";
+import Navbar from "@/components/Navbar";
 
 interface BlogPageProps {
   params: { id: string };
@@ -18,7 +18,8 @@ const BlogPostPage = async ({ params }: BlogPageProps) => {
   const post = snapshot.data();
 
   return (
-    <div className="w-full py-16 px-4 lg:px-24">
+    <>
+       <div className="w-full py-16 px-4 lg:px-24">
       <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
       <div className="text-sm text-gray-500 flex flex-wrap items-center gap-4 mb-10">
         <span className="flex items-center gap-1">
@@ -41,6 +42,7 @@ const BlogPostPage = async ({ params }: BlogPageProps) => {
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
     </div>
+    </>
   );
 };
 

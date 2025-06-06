@@ -34,7 +34,7 @@ const Navbar = () => {
       <div className="container-custom py-4 w-screen">
         <div className="flex items-center justify-end w-full">
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-6 ">
             <Link
               href="/"
               className="text-white hover:text-gray-300 font-medium transition-colors duration-300"
