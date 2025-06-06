@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { ArrowRight, Award, BookOpen, Calendar, Heart } from "lucide-react";
 import Image from "next/image";
 import { founder } from "@/assets";
@@ -62,24 +61,24 @@ const About = () => {
                   deeper conviction: that lasting change requires shifting
                   narratives around violence, trauma, and recovery. This belief
                   in the power of storytelling and community building became a
-                  cornerstone of the organization's approach.
+                  cornerstone of the organization&apos;s approach.
                 </p>
 
                 <p>
                   Today, through leadership and personal experience, Christian
-                  guides Change the Narrative 333's mission to bridge resource
+                  guides Change the Narrative 333&apos;s mission to bridge resource
                   gaps, foster community healing, and ultimately break cycles of
                   violence and inequality.
                 </p>
               </div>
 
               <h3 className="text-2xl font-bold mt-12 mb-4 text-primary">
-                The Significance of "333"
+                The Significance of &quot;333&quot;
               </h3>
               <div className="prose max-w-none">
                 <p className="mb-4">
-                  The number "333" holds special significance in our
-                  organization's name and philosophy. In numerology, 333 is
+                  The number &quot;333&quot; holds special significance in our
+                  organization&apos;s name and philosophy. In numerology, 333 is
                   often associated with protection, encouragement, and divine
                   guidance. For our founder, it represents:
                 </p>

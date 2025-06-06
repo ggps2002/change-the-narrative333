@@ -1,10 +1,8 @@
 "use client";
 
-import { logo, logoSVG, nami } from "@/assets";
-import ChangeTheNarrative333Logo from "@/assets/ChangeTheNarrative333Logo";
+import { logoSVG, nami } from "@/assets";
 import BlackVotesMatter from "@/assets/partners/BlackVotesMatter";
 import Reform from "@/assets/partners/Reform";
-import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronDown, ChevronUp } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";

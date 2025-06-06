@@ -3,7 +3,6 @@ import { db } from "@/lib/firebase/utils";
 import { notFound } from "next/navigation";
 import { Calendar, Tag, User } from "lucide-react";
 import { format } from "date-fns";
-import Navbar from "@/components/Navbar";
 
 interface BlogPageProps {
   params: { id: string };

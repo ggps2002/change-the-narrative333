@@ -6,7 +6,6 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -24,16 +23,12 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import {
-  AlertCircle,
-  Download,
   FileText,
   Heart,
   Loader2,
   PenSquare,
   Plus,
-  Search,
   Trash2,
-  Users,
   X,
 } from "lucide-react";
 import { onAuthStateChanged, signOut } from "firebase/auth";
@@ -59,11 +54,10 @@ type BlogFormData = {
 
 const Admin = () => {
   const router = useRouter();
-  const [loading, setLoading] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [deletingPostId, setDeletingPostId] = useState<string | null>(null);
-  const { posts, loadingBlog, addPost, updatePost, deletePost } =
+  const { posts, addPost, updatePost, deletePost } =
     useAdminBlog();
   const [content, setContent] = useState("");
   const [editingPostId, setEditingPostId] = useState<string | null>(null);
@@ -92,10 +86,8 @@ const Admin = () => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       if (!user) {
         router.push('/login');
-      } else if (user.email !== 'admin@changethenarrative333.org') {
+      } else (user.email !== 'admin@changethenarrative333.org') {
         router.push('/dashboard');
-      } else {
-        setLoading(false); // ✅ Admin verified
       }
     });
 

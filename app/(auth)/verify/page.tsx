@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { auth } from "@/lib/firebase/utils";
 import { useRouter } from "next/navigation";
 import { reload, sendEmailVerification, signOut } from "firebase/auth";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 type StatusType = "error" | "success";
 interface Status {
@@ -36,7 +36,7 @@ export default function VerifyPage() {
           type: "success",
           message: "Verification email has been resent. Please check your inbox.",
         });
-      } catch (error: any) {
+      } catch (error: unknown) {
         console.error("Error resending email:", error);
         setStatus({
           type: "error",
@@ -55,6 +55,7 @@ export default function VerifyPage() {
     try {
       await signOut(auth);
       router.push("/register");
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (err) {
       setStatus({
         type: "error",
@@ -69,12 +70,12 @@ export default function VerifyPage() {
         <h1 className="text-2xl font-bold mb-4 text-center text-primary">Verify Your Email</h1>
 
         <p className="text-center text-sm text-muted-foreground mb-6">
-          We've sent a verification link to your email. Once verified, click below.
+          We&apos;ve sent a verification link to your email. Once verified, click below.
         </p>
 
         <div className="flex flex-col gap-4">
           <Button onClick={checkVerification} className="bg-blue-600 text-white w-full">
-            I’ve Verified My Email
+            I&apos;ve Verified My Email
           </Button>
 
           <Button className="bg-gray-100 hover:bg-gray-200 text-black" onClick={handleResend}>
