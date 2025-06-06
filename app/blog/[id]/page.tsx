@@ -6,11 +6,11 @@ import { format } from "date-fns";
 import { Metadata } from "next"; // Optional, if you're using metadata
 import { PageProps } from "@/types"; // Or manually define below
 
-interface BlogPageProps {
+const BlogPostPage = async ({
+  params,
+}: {
   params: { id: string };
-}
-
-const BlogPostPage = async ({ params }: BlogPageProps) => {
+}) => {
   const docRef = doc(db, "blogPosts", params.id);
   const snapshot = await getDoc(docRef);
 
