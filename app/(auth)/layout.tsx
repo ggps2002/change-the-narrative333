@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 // app/(auth)/layout.tsx
 export default function AuthLayout({ children }: { children: React.ReactNode }) {
   return (
-    <main className="min-h-screen bg-gray-100 text-gray-900">
+    <main className="min-h-screen text-gray-900">
       {children}
     </main>
   );

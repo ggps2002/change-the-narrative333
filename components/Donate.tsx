@@ -15,10 +15,10 @@ const Donate = () => {
     <div className="flex flex-col">
       {/* Hero Section */}
       <section
-        className="relative bg-cover bg-center h-[400px] flex items-center"
+        className="relative bg-cover bg-center h-[600px] flex items-center"
         style={{
           backgroundImage:
-            'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1500673922987-e212871fec22?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80")',
+            'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1610280899371-079e7b321643?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cHJvdGVzdCUyMGFnYWluc3QlMjBndW4lMjB2aW9sZW5jZXxlbnwwfHwwfHx8MA%3D%3D")',
           backgroundPosition: "center 30%",
         }}
       >
@@ -51,7 +51,7 @@ const Donate = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             <div className="rounded-lg overflow-hidden shadow-lg">
               <Image
-                src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src="https://images.unsplash.com/photo-1610500796385-3ffc1ae2f046?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIzfHxmdW4lMjBlZHVjYXRpb24lMjBhZHZvY2FjeXxlbnwwfHwwfHx8MA%3D%3D"
                 alt="Community support"
                 width={800}
                 height={400}
@@ -71,7 +71,7 @@ const Donate = () => {
 
             <div className="rounded-lg overflow-hidden shadow-lg">
               <Image
-                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src="https://images.unsplash.com/photo-1678656447432-3bbe4eb4eceb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aGVscGluZyUyMHRvd2FyZHMlMjBtZW50YWwlMjBoZWFsdGglMjByZXNvdXJjZXMlMkMlMjBob3VzaW5nJTIwYXNzaXN0YW5jZSUyQyUyMGFuZCUyMG90aGVyJTIwZXNzZW50aWFsJTIwc2VydmljZXMlMjBjb21tdW5pdHl8ZW58MHx8MHx8fDA%3D"
                 alt="Direct support services"
                 width={800}
                 height={400}
@@ -226,6 +226,10 @@ const Donate = () => {
                       variant="outline"
                       className="hover:text-black"
                       size="sm"
+                      onClick={() =>
+                        (window.location.href =
+                          "mailto:admin@changethenarrative333.org")
+                      }
                     >
                       Contact Us
                     </Button>

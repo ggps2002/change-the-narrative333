@@ -215,7 +215,7 @@ const About = () => {
               Help us change narratives and transform lives by getting involved
               today.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-col flex-wrap gap-4 md:justify-center items-center md:flex-row">
               <Link href="/register" className="rounded-full w-fit">
                 <div className="text-xl md:text-2xl font-extrabold font-sans border-2 border-black rounded-full inline-flex gap-2 hover:gap-6 transition-all ease-in duration-100 p-3 md:p-6">
                   <p>GET INVOLVED</p>

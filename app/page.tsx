@@ -57,7 +57,7 @@ export default function Home() {
       </section>
 
       {/* Overlapping Typography Box with blend mode */}
-      <div className="md:-mt-[5.8rem] lg:-mt-[8rem] -mt-[3rem] z-30 relative">
+      <div className="md:-mt-[5.8rem] lg:-mt-[8rem] -mt-[3rem] z-10 relative">
         <div className="container-custom">
           <h1 className="text-5xl md:text-8xl lg:text-9xl font-black uppercase mb-4 tracking-tight">
             <span className="text-white whitespace-nowrap">THE POWER OF </span>
@@ -312,7 +312,14 @@ export default function Home() {
                 LANDMARK CASES
               </h2>
               <div className="flex flex-col md:flex-row">
-                <div className="w-24 h-24 bg-gray-200 mr-4 rounded"></div>
+                <div className="mr-4 rounded">
+                    <Image
+                      src="https://images.unsplash.com/photo-1743897981335-2e4c3f9fb488?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fG5vbiUyMHByb2ZpdCUyMG9yZ2FuaXphdGlvbnxlbnwwfHwwfHx8MA%3D%3D"
+                      height={500}
+                      width={500}
+                      alt="protest"
+                    />
+                </div>
                 <div>
                   <p className="text-lg">
                     Representing people from communities affected by violence,
@@ -333,7 +340,14 @@ export default function Home() {
                 INSPIRING HOPE
               </h2>
               <div className="flex flex-col md:flex-row">
-                <div className="w-24 h-24 bg-gray-200 mr-4 rounded"></div>
+                <div className="mr-4 rounded">
+                  <Image
+                    src="https://images.unsplash.com/photo-1592081164105-70c567c6cfa2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTEyfHxub24lMjBwcm9maXQlMjBvcmdhbml6YXRpb258ZW58MHx8MHx8fDA%3D"
+                    height={500}
+                    width={500}
+                    alt="peace"
+                  />
+                </div>
                 <div>
                   <p className="text-lg">
                     Sharing stories of resilience and recovery from those
@@ -354,7 +368,14 @@ export default function Home() {
                 TRACKING ISSUES
               </h2>
               <div className="flex flex-col md:flex-row">
-                <div className="w-24 h-24 bg-gray-200 mr-4 rounded"></div>
+                <div className="mr-4 rounded">
+                  <Image
+                    src="https://images.unsplash.com/photo-1693027986160-78f29eabc5de?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fG5vbiUyMHByb2ZpdCUyMG9yZ2FuaXphdGlvbiUyMGNvbW11bml0eSUyMHBlb3BsZSUyMGZpZ2h0aW5nJTIwb3ZlciUyMHZpb2xlbmNlfGVufDB8fDB8fHww"
+                    height={500}
+                    width={500}
+                    alt="people"
+                  />
+                </div>
                 <div>
                   <p className="text-lg">
                     Monitoring incidents of violence and systemic inequality

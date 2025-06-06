@@ -86,7 +86,7 @@ const Register = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <div className="container-custom py-12">
-        <div className="max-w-md mx-auto bg-white rounded-lg shadow-md p-8">
+        <div className="max-w-md mx-auto rounded-lg shadow-md p-8">
           <h1 className="text-3xl font-bold mb-6 text-center">Sign Up</h1>
 
           {error && (

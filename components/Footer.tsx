@@ -175,14 +175,14 @@ const Footer = () => {
           <p className="text-gray-300 text-sm mb-2 md:mb-0">
             © {currentYear} Change the Narrative 333. All rights reserved.
           </p>
-          <div className="flex space-x-4">
+          {/* <div className="flex space-x-4">
             <Link href="#" className="text-gray-300 hover:text-white text-sm">
               Privacy Policy
             </Link>
             <Link href="#" className="text-gray-300 hover:text-white text-sm">
               Terms of Service
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

@@ -27,7 +27,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 z-10 w-screen ${
+      className={`fixed top-0 z-50 w-screen ${
         isScrolled ? "bg-[#3a3426] z-50 " : "bg-transparent"
       }`}
     >
@@ -60,7 +60,7 @@ const Navbar = () => {
               Blog
             </Link>
             <div className="flex items-center space-x-2">
-              <Link href="/login" className="rounded-full w-fit">
+              <Link href="/donate" className="rounded-full w-fit">
                 <div className="text-sm font-extrabold font-sans border-2 border-white text-white hover:text-black rounded-full inline-flex gap-2 hover:gap-6 hover:bg-white transition-all ease-in duration-200 p-4">
                   <p className="self-center">DONATE</p>
                   {/* <ArrowRight className="self-center" /> */}
@@ -72,7 +72,7 @@ const Navbar = () => {
                   {/* <ArrowRight className="self-center" /> */}
                 </div>
               </Link>
-              <Link href="/login" className="rounded-full w-fit">
+              <Link href="/register" className="rounded-full w-fit">
                 <div className="text-sm font-extrabold font-sans border-2 border-white text-white hover:text-black rounded-full inline-flex gap-2 hover:gap-6 hover:bg-white transition-all ease-in duration-200 p-4">
                   <p className="self-center">GET HELP</p>
                   {/* <ArrowRight className="self-center" /> */}
@@ -82,7 +82,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="relative md:hidden z-30">
+          <div className="relative md:hidden z-40">
             <button
               onClick={toggleMenu}
               className="text-gray-700 hover:text-primary focus:outline-none"
@@ -99,7 +99,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden w-screen absolute top-0 left-0 bg-[#3A3426] px-6 py-4 space-y-4 z-20 shadow-md">
+          <div className="md:hidden w-screen absolute top-0 left-0 bg-[#3A3426] px-6 py-4 space-y-4 z-30 shadow-md">
             <Link
               href="/"
               className="block text-gray-300 hover:text-white font-medium py-2 transition-colors duration-300"

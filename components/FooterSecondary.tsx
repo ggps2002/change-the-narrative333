@@ -5,7 +5,7 @@ import Link from "next/link";
 const FooterSecondary = () => {
   const currentYear = new Date().getFullYear();
   return (
-    <div className="flex justify-center p-6 bg-transparent">
+    <div className="flex justify-center p-6">
       <div>
         <div>
           <div className="flex justify-center space-x-4 mt-4">
@@ -30,14 +30,14 @@ const FooterSecondary = () => {
             </a>
           </div>
           <div className="border-t border-gray-700 mt-12 pt-8 flex flex-col items-center gap-4">
-            <div className="flex space-x-4">
+            {/* <div className="flex space-x-4">
               <Link href="#" className=" text-gray-400 text-md">
                 Privacy Policy
               </Link>
               <Link href="#" className="text-gray-400 text-md">
                 Terms of Service
               </Link>
-            </div>
+            </div> */}
             <p className="text-gray-400 text-sm mb-2 md:mb-0">
               © {currentYear} Change the Narrative 333. All rights reserved.
             </p>

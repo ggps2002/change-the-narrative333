@@ -5,7 +5,7 @@ import { BMCButton } from "@/assets";
 export default function BuyMeACoffeeButton() {
   return (
     <Link
-      href="https://www.buymeacoffee.com/your-page"
+      href={process.env.NEXT_PUBLIC_BUYMEACOFFEE_URL ?? "#"}
       target="_blank"
       aria-label="Buy Me a Coffee"
     >

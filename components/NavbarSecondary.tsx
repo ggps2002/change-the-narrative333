@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const NavbarSecondary = () => {
   return (
-    <div className="flex justify-start px-6 bg-transparent h-[7rem]">
+    <div className="flex justify-start px-6 h-[7rem]">
       <div className="rounded-full flex items-center justify-center">
         <Link
           href="/"
