@@ -88,19 +88,19 @@ const Admin = () => {
     },
   });
 
-  // useEffect(() => {
-  //   const unsubscribe = onAuthStateChanged(auth, async (user) => {
-  //     if (!user) {
-  //       router.push('/login');
-  //     } else if (user.email !== 'admin@changethenarrative333.org') {
-  //       router.push('/dashboard');
-  //     } else {
-  //       setLoading(false); // ✅ Admin verified
-  //     }
-  //   });
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, async (user) => {
+      if (!user) {
+        router.push('/login');
+      } else if (user.email !== 'admin@changethenarrative333.org') {
+        router.push('/dashboard');
+      } else {
+        setLoading(false); // ✅ Admin verified
+      }
+    });
 
-  //   return () => unsubscribe();
-  // }, []);
+    return () => unsubscribe();
+  }, []);
 
   const handleLogout = async () => {
     await signOut(auth);
