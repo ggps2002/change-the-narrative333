@@ -8,6 +8,12 @@ import { Button } from "@/components/ui/button";
 import { useAdminDonation } from "@/hooks/useAdminDonation";
 import BuyMeACoffeeButton from "./BuyMeACoffee";
 
+// Define the Impact type if not imported from elsewhere
+type Impact = {
+  amount: number;
+  description: string;
+};
+
 const Donate = () => {
   const { content } = useAdminDonation();
 
@@ -162,17 +168,17 @@ const Donate = () => {
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
-                  {content?.impacts.map((impact) => (
+                    {content?.impacts.map((impact: Impact) => (
                     <div
                       key={impact.description}
                       className="flex items-start gap-4"
                     >
                       <div className="text-2xl font-bold text-primary">
-                        ${impact.amount}
+                      ${impact.amount}
                       </div>
                       <p className="text-gray-700">{impact.description}</p>
                     </div>
-                  ))}
+                    ))}
                 </div>
               </CardContent>
             </Card>

@@ -117,7 +117,19 @@ const Admin = () => {
     setIsFormOpen(true);
   };
 
-  const handlePostEdit = (post) => {
+  interface BlogPost {
+    id: string;
+    title: string;
+    author: string;
+    category: string;
+    type: string;
+    publishDate?: Timestamp;
+    excerpt: string;
+    content: string;
+    coverImage?: string;
+  }
+
+  const handlePostEdit = (post: BlogPost) => {
     setEditingPostId(post.id);
     const formattedDate = post.publishDate
       ? post.publishDate.toDate().toISOString().split("T")[0]
@@ -168,7 +180,12 @@ const Admin = () => {
     setEditingPostId(null);
   };
 
-  const handleDeletePost = async (post) => {
+  interface BlogPostForDelete {
+    id: string;
+    [key: string]: any;
+  }
+
+  const handleDeletePost = async (post: BlogPostForDelete): Promise<void> => {
     setDeletingPostId(post.id); // Mark this post as being deleted
     await deletePost(post.id);
     setDeletingPostId(null);

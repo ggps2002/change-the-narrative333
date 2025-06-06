@@ -237,12 +237,31 @@ const FilterRow = () => (
   </div>
 );
 
+type Survey = {
+  id: string;
+  name: string;
+  email: string;
+  role: string;
+  date: any;
+  status: string;
+  location?: string;
+  needs?: string;
+  interest?: string;
+};
+
+interface TableSectionProps {
+  data: Survey[];
+  setSelectedSurvey: (survey: Survey) => void;
+  selectedIds: string[];
+  setSelectedIds: React.Dispatch<React.SetStateAction<string[]>>;
+}
+
 const TableSection = ({
   data,
   setSelectedSurvey,
   selectedIds,
   setSelectedIds,
-}) => {
+}: TableSectionProps) => {
   const isSupporter = data?.[0]?.interest !== undefined;
 
   const toggleSelect = (id: string) => {
@@ -285,11 +304,11 @@ const TableSection = ({
               <TableCell>{survey.name}</TableCell>
               <TableCell>{survey.email}</TableCell>
               {isSupporter ? (
-                <TableCell>{survey.interest.slice(0, 20)}...</TableCell>
+                <TableCell>{survey.interest?.slice(0, 20)}...</TableCell>
               ) : (
                 <>
                   <TableCell>{survey.location}</TableCell>
-                  <TableCell>{survey.needs.slice(0, 20)}...</TableCell>
+                  <TableCell>{survey.needs?.slice(0, 20) ?? "N/A"}...</TableCell>
                 </>
               )}
               <TableCell>
@@ -324,7 +343,7 @@ const PaginationControls = ({ page, setPage, totalItems }: any) => {
         variant="outline"
         size="sm"
         disabled={page === 1}
-        onClick={() => setPage((p) => p - 1)}
+        onClick={() => setPage((p: number) => p - 1)}
       >
         Previous
       </Button>
@@ -335,7 +354,7 @@ const PaginationControls = ({ page, setPage, totalItems }: any) => {
         variant="outline"
         size="sm"
         disabled={page === totalPages}
-        onClick={() => setPage((p) => p + 1)}
+        onClick={() => setPage((p: number) => p + 1)}
       >
         Next
       </Button>

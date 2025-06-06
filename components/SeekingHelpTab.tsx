@@ -74,7 +74,7 @@ const SeekingHelpTab = () => {
   });
   const [submitting, setSubmitting] = useState(false);
 
-  const handleChange = (field: string, value: string) => {
+  const handleChange = (field: string, value: string | boolean) => {
     setForm((prev) => ({ ...prev, [field]: value }));
   };
 

@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import BlackVotesMatter from "@/assets/partners/BlackVotesMatter";
 import Reform from "@/assets/partners/Reform";
+import { logoSVG, nami } from "@/assets";
 
 // Partner data - replace with your actual partners
 const partners = [
