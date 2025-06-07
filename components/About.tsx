@@ -30,7 +30,7 @@ const About = () => {
               <div className="prose max-w-none">
                 {/* Image */}
                 <Image
-                  src='/assets/founder.jpg' // or use `Image` if you're using Next.js
+                  src="/assets/founder.jpg" // or use `Image` if you're using Next.js
                   alt="Christian Gant-Madison"
                   width={300}
                   height={300}
@@ -40,34 +40,44 @@ const About = () => {
                 {/* Text */}
                 <p className="text-gray-700 text-base leading-relaxed">
                   Christian Gant-Madison founded Change the Narrative 333 after
-                  personally experiencing the devastating impacts of gun
-                  violence and witnessing the struggles many face when trying to
-                  access support and resources in its aftermath.
+                  growing up in West Philadelphia, where he witnessed the
+                  deep-rooted pain his community faced due to structural
+                  violence and decades of disinvestment. He recognized not only
+                  the material challenges but also the harmful narratives that
+                  stigmatize people from communities like his. Christian’s
+                  journey, from an under-resourced neighborhood to becoming an
+                  Ivy League student-athlete, is a testament to the power of
+                  equitable access to opportunity. His lived experience fuels
+                  his belief that when people are given the right resources,
+                  they can heal, reclaim their stories, and forge their own
+                  paths to success.
                 </p>
 
                 <p className="mb-4">
-                  Having lost loved ones to gun violence and navigating the
-                  complex journey of recovery, Christian recognized significant
-                  gaps in available services, particularly for underserved
-                  communities. The fragmentation of support systems and the
-                  difficulty in accessing them inspired a vision for a
-                  centralized approach to connecting people with the help they
-                  need.
+                  Christian was also deeply affected by the loss of childhood
+                  friends to gun violence and the emotional weight of navigating
+                  systems that often fail those most in need. He became acutely
+                  aware of how fragmented and inaccessible many social support
+                  services are, especially in urban communities. This inspired
+                  his vision for a centralized, holistic approach to connecting
+                  people with critical support.
                 </p>
 
                 <p className="mb-4">
                   Beyond addressing immediate needs, Christian was driven by a
                   deeper conviction: that lasting change requires shifting
                   narratives around violence, trauma, and recovery. This belief
-                  in the power of storytelling and community building became a
-                  cornerstone of the organization&apos;s approach.
+                  in the power of storytelling, healing, and reimagining how
+                  systems serve communities became a cornerstone of the
+                  organization’s mission.
                 </p>
 
                 <p>
-                  Today, through leadership and personal experience, Christian
-                  guides Change the Narrative 333&apos;s mission to bridge resource
-                  gaps, foster community healing, and ultimately break cycles of
-                  violence and inequality.
+                  Today, through a blend of personal experience, bold
+                  leadership, and a deep commitment to justice, Christian guides
+                  Change the Narrative 333 in its mission to bridge resource
+                  gaps, empower individuals, foster community healing, and
+                  ultimately break cycles of violence and inequity.
                 </p>
               </div>
 
@@ -78,8 +88,10 @@ const About = () => {
                 <p className="mb-4">
                   The number &quot;333&quot; holds special significance in our
                   organization&apos;s name and philosophy. In numerology, 333 is
-                  often associated with protection, encouragement, and divine
-                  guidance. For our founder, it represents:
+                  often associated with encouragement, divine guidance, and self
+                  restoration. We believe that by partaking in our services
+                  community members are engaging in a profound form of self
+                  restoration. For our founder, 333 also represents:
                 </p>
 
                 <ul className="list-disc pl-5 space-y-2 mb-4">
@@ -118,18 +130,18 @@ const About = () => {
                 <div>
                   <h4 className="font-semibold text-primary mb-1">Mission</h4>
                   <p>
-                    To transform lives impacted by gun violence and systemic
-                    inequality through centralized support, community
-                    engagement, and narrative change.
+                    To transform lives impacted by structural violence through
+                    enhanced social-resource navigation, community engagement,
+                    and advocacy.
                   </p>
                 </div>
 
                 <div>
                   <h4 className="font-semibold text-primary mb-1">Vision</h4>
                   <p>
-                    Communities where individuals thrive free from violence,
-                    with equitable access to resources and opportunities for
-                    healing and growth.
+                    Communities where individuals prosper and are free from
+                    violence, with equitable access to resources and
+                    opportunities that foster success.
                   </p>
                 </div>
 
@@ -163,38 +175,45 @@ const About = () => {
             {/* Timeline items */}
             <div className="relative space-y-12">
               <TimelineItem
-                year="2020"
-                title="Organization Founded"
-                content="Change the Narrative 333 established in response to rising gun violence and lack of centralized support."
+                year="July 2024"
+                title="Idea first conceived"
+                content="The idea emerged in response to the rise in gun violence and the lack of a centralized space for support, healing, and community-driven solutions."
                 isLeft={true}
               />
 
               <TimelineItem
-                year="2021"
+                year="November 2024"
                 title="First Community Outreach"
                 content="Launched initial programs connecting individuals to mental health resources and emergency support services."
                 isLeft={false}
               />
 
               <TimelineItem
-                year="2022"
-                title="Digital Platform Development"
-                content="Created online resource hub and digital storytelling initiative to increase accessibility and reach."
+                year="March 2025"
+                title="Organization Founded"
+                content="Change the Narrative 333 established in response to rising gun violence and lack of centralized support."
                 isLeft={true}
               />
 
               <TimelineItem
-                year="2023"
-                title="Partnership Network Expansion"
-                content="Established formal partnerships with healthcare providers, housing services, and education resources."
+                year="April 2025"
+                title="Digital Platform Development"
+                content="Created online resource hub and digital storytelling initiative to increase accessibility and reach."
                 isLeft={false}
               />
 
               <TimelineItem
-                year="2024"
-                title="Comprehensive Support Model"
-                content="Integrated survey system to match individuals with tailored resources and ongoing support."
+                year="May 2025 (and ongoing)"
+                title="Partner Network Expansion"
+                content="Established formal partnerships with healthcare providers, housing services, and education resources."
                 isLeft={true}
+              />
+
+                <TimelineItem
+                year="June 2025"
+                title="Comprehensive Support Model "
+                content="Integrated survey system to match individuals with tailored resources and ongoing support."
+                isLeft={false}
               />
             </div>
           </div>

@@ -35,8 +35,8 @@ const Donate = () => {
               Support Our Mission
             </h1>
             <p className="text-xl mb-6 text-white">
-              Your contribution helps us provide vital resources and services to
-              those affected by gun violence and systemic inequality.
+              Your contribution helps us support communities impacted by
+              longstanding gaps in access to resources and opportunities.
             </p>
           </div>
         </div>
@@ -169,17 +169,17 @@ const Donate = () => {
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
-                    {content?.impacts.map((impact: Impact) => (
+                  {content?.impacts.map((impact: Impact) => (
                     <div
                       key={impact.description}
                       className="flex items-start gap-4"
                     >
                       <div className="text-2xl font-bold text-primary">
-                      ${impact.amount}
+                        ${impact.amount}
                       </div>
                       <p className="text-gray-700">{impact.description}</p>
                     </div>
-                    ))}
+                  ))}
                 </div>
               </CardContent>
             </Card>
@@ -188,14 +188,20 @@ const Donate = () => {
           <div className="lg:col-span-3">
             <Card className="border-0 shadow-lg">
               <CardHeader>
-                <CardTitle>Support Us Directly</CardTitle>
+                <CardTitle>Start Local. Reach Global.</CardTitle>
               </CardHeader>
-              <CardContent className="py-10 flex flex-col items-center justify-center text-center space-y-6">
+              <CardContent className="py-6 flex flex-col px-6 justify-center space-y-6">
                 <p className="text-lg text-gray-700 max-w-md">
-                  Support us directly through PayPal — it’s secure,
-                  simple, and appreciated!
+                  Change the Narrative 333 began with a mission to uplift urban
+                  communities—places often overlooked but full of potential.
+                  With your support, we can expand our impact beyond city limits
+                  to address social challenges around the world. Every donation
+                  helps create opportunity, drive healing, and build a more just
+                  future.
                 </p>
-                <DonateButton/>
+                <p>Support us directly through PayPal — it’s secure,
+                  simple, and appreciated!</p>
+                <DonateButton />
               </CardContent>
             </Card>
 

@@ -1,6 +1,6 @@
 "use client";
 
-import BlackVotesMatter from "@/public/assets/partners/BlackVotesMatter"
+import BlackVotesMatter from "@/public/assets/partners/BlackVotesMatter";
 import Reform from "@/public/assets/partners/Reform";
 import { ArrowRight, ChevronDown, ChevronUp } from "lucide-react";
 import Image from "next/image";
@@ -15,10 +15,7 @@ export default function Home() {
       <section className="relative md:h-[70vh] h-[40vh] w-full overflow-hidden">
         <div className="relative z-10 -top-[4%] -left-[3%] md:-top-[6%] md:left-[10%] w-fit">
           <div className="container-custom">
-            <Link
-              href="/"
-              className=" text-white"
-            >
+            <Link href="/" className=" text-white">
               <Image
                 src="/assets/logo.svg"
                 height={140}
@@ -54,12 +51,14 @@ export default function Home() {
       </section>
 
       {/* Overlapping Typography Box with blend mode */}
-      <div className="md:-mt-[5.8rem] lg:-mt-[8rem] -mt-[3rem] z-10 relative">
+      <div className="md:-mt-[3rem] lg:-mt-[4.8rem] -mt-[2.5rem] z-10 relative">
         <div className="container-custom">
-          <h1 className="text-5xl md:text-8xl lg:text-9xl font-black uppercase mb-4 tracking-tight">
-            <span className="text-white whitespace-nowrap">THE POWER OF </span>
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-black uppercase mb-4 tracking-tight">
+            <span className="text-white whitespace-nowrap">
+              CHANGING NARRATIVES{" "}
+            </span>
             <br />
-            THE PEOPLE.
+            TO REDEFINE WHAT'S POSSIBLE.
           </h1>
           <p className="text-lg md:text-2xl text-black mb-2">
             Centering People. Building Access. Driven by Justice.
@@ -85,8 +84,8 @@ export default function Home() {
       {/* Issues We Fight For Section - Inspired by SPLC layout */}
       <section className="py-16 bg-white">
         <div className="container-custom">
-          <h2 className="text-4xl md:text-5xl font-black mb-12 uppercase">
-            What we fight for
+          <h2 className="text-3xl md:text-5xl font-black mb-12 uppercase">
+            What we advocate for
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-6 grid-rows-[repeat(2,minmax(200px,1fr))] gap-6">
@@ -133,8 +132,9 @@ export default function Home() {
                 <h3 className="text-2xl font-bold mb-2">Our Approach</h3>
                 <p className="text-sm">
                   We build bridges between communities and resources by
-                  partnering with local organizations, creating resource hubs,
-                  and increasing visibility through media and events.
+                  partnering with local and national organizations, creating
+                  resource hubs, and increasing visibility through media and
+                  events
                 </p>
                 <div className="flex gap-1">
                   <Link
@@ -185,14 +185,14 @@ export default function Home() {
           <div className="md:flex md:items-start md:gap-12">
             <div className="md:w-2/3">
               <h2 className="text-5xl md:text-7xl font-black mb-8 uppercase tracking-tight">
-                CHANGE THE NARRATIVE. <br /> THEN THE NATION.
+                CHANGE THE NARRATIVE. <br /> THEN LEAD ETHICALLY.
               </h2>
 
               <div className="prose max-w-none text-lg">
                 <p className="mb-4">
-                  Gun violence and systemic inequality continue to plague our
-                  communities, particularly impacting underserved populations
-                  and creating cycles of trauma that are difficult to break.
+                  Persistent gaps in access and opportunity continue to plague
+                  our communities, often by creating cycles of trauma that are
+                  difficult to break.
                 </p>
 
                 {showFullProblem ? (
@@ -275,7 +275,12 @@ export default function Home() {
                   </div>
                   <div className="flex flex-col items-center">
                     <div className="w-16 h-16 bg-[#0C64A0] p-2 rounded-full flex items-center justify-center mb-2">
-                      <Image src="/assets/partners/nami-logo.png" height={100} width={100} alt="nami" />
+                      <Image
+                        src="/assets/partners/nami-logo.png"
+                        height={100}
+                        width={100}
+                        alt="nami"
+                      />
                     </div>
                   </div>
                   <div className="flex flex-col items-center">
@@ -306,21 +311,21 @@ export default function Home() {
           <div className="space-y-12">
             <div>
               <h2 className="text-4xl md:text-5xl font-black mb-4 uppercase">
-                LANDMARK CASES
+                REIMAGINING JUSTICE
               </h2>
               <div className="flex flex-col md:flex-row">
                 <div className="mr-4 rounded">
-                    <Image
-                      src="https://images.unsplash.com/photo-1743897981335-2e4c3f9fb488?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fG5vbiUyMHByb2ZpdCUyMG9yZ2FuaXphdGlvbnxlbnwwfHwwfHx8MA%3D%3D"
-                      height={500}
-                      width={500}
-                      alt="protest"
-                    />
+                  <Image
+                    src="https://images.unsplash.com/photo-1743897981335-2e4c3f9fb488?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fG5vbiUyMHByb2ZpdCUyMG9yZ2FuaXphdGlvbnxlbnwwfHwwfHx8MA%3D%3D"
+                    height={500}
+                    width={500}
+                    alt="protest"
+                  />
                 </div>
                 <div>
                   <p className="text-lg">
-                    Representing people from communities affected by violence,
-                    creating precedents for justice.
+                    Representing people from communities affected by structural
+                    violence, creating new frameworks for justice.
                   </p>
                   <Link
                     href="/about"
