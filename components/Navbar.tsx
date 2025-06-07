@@ -5,8 +5,6 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Menu, X } from "lucide-react";
 import Image from "next/image";
-import { logo } from "@/assets";
-import ChangeTheNarrative333Logo from "@/assets/ChangeTheNarrative333Logo";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

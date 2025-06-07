@@ -126,7 +126,7 @@ const Footer = () => {
                   Login
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="#" className="text-gray-300 hover:text-white">
                   Resources
                 </Link>
@@ -135,16 +135,16 @@ const Footer = () => {
                 <Link href="#" className="text-gray-300 hover:text-white">
                   Emergency Help
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
             <address className="text-gray-300 not-italic text-sm space-y-1">
-              <p>Email: info@changethenarrative333.org</p>
-              <p>Phone: (555) 123-4567</p>
-              <p>Address: 123 Hope Street, Anytown, USA</p>
+              <p>Email: admin@changethenarrative333.org</p>
+              <p>Phone: 267-453-9416</p>
+              <p>Headquaters:  Philadelphia, PA</p>
             </address>
             <div className="flex space-x-4 mt-4">
               <a href="#" aria-label="Facebook" className="hover:text-white">

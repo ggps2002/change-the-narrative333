@@ -22,7 +22,7 @@ const FooterSecondary = () => {
               <Linkedin size={20} />
             </a>
             <a
-              href="mailto:info@changethenarrative333.org"
+              href="mailto:admin@changethenarrative333.org"
               aria-label="Email"
               className="hover:text-gray-600"
             >

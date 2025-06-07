@@ -48,16 +48,17 @@ export default function DonatePage() {
   return (
     <div className="flex flex-col gap-4">
       <div className="flex items-center gap-2">
-        <p>$</p>
+        <strong>Amount: $</strong>
         <Input
           type="number"
           min={5}
           step={0.01}
           value={amount > 5 ? amount : 5}
           onChange={(e) => setAmount(parseFloat(e.target.value))}
+          className="w-16 h-10"
         />
       </div>
-      <Button onClick={handleDonate} className="w-64 h-10">
+      <Button onClick={handleDonate} className="w-full h-12">
         {isLoading ? (
             <>
                 <Loader2 className="w-4 h-4 animate-spin"/>

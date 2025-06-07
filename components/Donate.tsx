@@ -187,11 +187,11 @@ const Donate = () => {
 
           <div className="lg:col-span-3">
             <Card className="border-0 shadow-lg">
-              <CardHeader>
+              <CardHeader className="text-xl ">
                 <CardTitle>Start Local. Reach Global.</CardTitle>
               </CardHeader>
               <CardContent className="py-6 flex flex-col px-6 justify-center space-y-6">
-                <p className="text-lg text-gray-700 max-w-md">
+                <p className="text-lg text-gray-700">
                   Change the Narrative 333 began with a mission to uplift urban
                   communities—places often overlooked but full of potential.
                   With your support, we can expand our impact beyond city limits
