@@ -169,7 +169,7 @@ const SurveyTab = () => {
         open={!!selectedSurvey}
         onOpenChange={() => setSelectedSurvey(null)}
       >
-        <DialogContent>
+        <DialogContent style={{ height: "500px", overflowY: "scroll" }}>
           <DialogHeader>
             <DialogTitle>Survey Details</DialogTitle>
           </DialogHeader>
@@ -188,6 +188,105 @@ const SurveyTab = () => {
                   </p>
                   <p>
                     <strong>Primary Need:</strong> {selectedSurvey.needs}
+                  </p>
+                  <p>
+                    <strong>Consent to use my responses to help me:</strong>{" "}
+                    {selectedSurvey.resourceConsent ? "Yes" : "No"}
+                  </p>
+                  <p>
+                    <strong>
+                      Consent to my anonymized responses being used for
+                      research:
+                    </strong>{" "}
+                    {selectedSurvey.researchConsent ? "Yes" : "No"}
+                  </p>
+                  <p>
+                    <strong>Gun violence Impact:</strong>{" "}
+                    {selectedSurvey.gunViolenceImpact}
+                  </p>
+                  <p>
+                    <strong>Mental Health over past 6 months:</strong>{" "}
+                    {selectedSurvey.mentalHealth}
+                  </p>
+                  {/* <p>
+                <strong>Mental Health over past 6 months:</strong> {selectedSurvey.mentalHealth ? "Yes" : "No"}
+              </p> */}
+                  <p>
+                    <strong>Stable Housing:</strong>{" "}
+                    {selectedSurvey.stableHousing}
+                  </p>
+                  <p>
+                    <strong>Challenges affording nutritious meals:</strong>{" "}
+                    {selectedSurvey.foodChallenges}
+                  </p>
+                  <p>
+                    <strong>
+                      Interested in career preparation and job training:
+                    </strong>{" "}
+                    {selectedSurvey.careerInterest}
+                  </p>
+                  <p>
+                    <strong>
+                      Would you like support with financial literacy and money
+                      management:
+                    </strong>{" "}
+                    {selectedSurvey.financialLiteracy}
+                  </p>
+                  <p>
+                    <strong>Impacted by criminal legal system:</strong>{" "}
+                    {selectedSurvey.criminalLegalImpact}
+                  </p>
+                  <p>
+                    <strong>
+                      If impacted by criminal legal system, has this affected
+                      the ability to secure stable employment:
+                    </strong>{" "}
+                    {selectedSurvey.employmentAffected}
+                  </p>
+                  <p>
+                    <strong>Currently in parole or probation system:</strong>{" "}
+                    {selectedSurvey.paroleStatus}
+                  </p>
+                  <p>
+                    <strong>
+                      Currently need legal assistance or advocacy:
+                    </strong>{" "}
+                    {selectedSurvey.legalAssistance}
+                  </p>
+                  <p>
+                    <strong>Registered to vote(if 18 or older):</strong>{" "}
+                    {selectedSurvey.voterRegistration}
+                  </p>
+                  <p>
+                    <strong>Participate in Local or National elections:</strong>{" "}
+                    {selectedSurvey.electionParticipation}
+                  </p>
+                  <p>
+                    <strong>
+                      Interested in educational programs and opportunity:
+                    </strong>{" "}
+                    {selectedSurvey.educationalInterest}
+                  </p>
+                  <p>
+                    <strong>Do you have a primary care provider(PCP):</strong>{" "}
+                    {selectedSurvey.primaryCareProvider}
+                  </p>
+                  <p>
+                    <strong>
+                      Any ongoing health concerns you feel have not been
+                      properly addressed:
+                    </strong>{" "}
+                    {selectedSurvey.healthConcerns ? "Yes" : "No"}
+                  </p>
+                  <p>
+                    <strong>
+                      Would you like to be connected with a mentorship program:
+                    </strong>{" "}
+                    {selectedSurvey.mentorshipInterest}
+                  </p>
+                  <p>
+                    <strong>Additional Info:</strong>{" "}
+                    {selectedSurvey.additionalInfo}
                   </p>
                 </>
               ) : (
@@ -247,6 +346,28 @@ type Survey = {
   location?: string;
   needs?: string;
   interest?: string;
+  // Consent
+  resourceConsent: boolean;
+  researchConsent: boolean;
+
+  // Social Determinant Questions
+  gunViolenceImpact: string;
+  mentalHealth: string;
+  stableHousing: string;
+  foodChallenges: string;
+  careerInterest: string;
+  financialLiteracy: string;
+  criminalLegalImpact: string;
+  employmentAffected: string;
+  paroleStatus: string;
+  legalAssistance: string;
+  voterRegistration: string;
+  electionParticipation: string;
+  educationalInterest: string;
+  primaryCareProvider: string;
+  healthConcerns: string;
+  mentorshipInterest: string;
+  additionalInfo: string;
 };
 
 interface TableSectionProps {
@@ -308,7 +429,9 @@ const TableSection = ({
               ) : (
                 <>
                   <TableCell>{survey.location}</TableCell>
-                  <TableCell>{survey.needs?.slice(0, 20) ?? "N/A"}...</TableCell>
+                  <TableCell>
+                    {survey.needs?.slice(0, 20) ?? "N/A"}...
+                  </TableCell>
                 </>
               )}
               <TableCell>
