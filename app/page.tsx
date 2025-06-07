@@ -316,7 +316,7 @@ export default function Home() {
               <div className="flex flex-col md:flex-row">
                 <div className="mr-4 rounded">
                   <Image
-                    src="https://images.unsplash.com/photo-1743897981335-2e4c3f9fb488?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fG5vbiUyMHByb2ZpdCUyMG9yZ2FuaXphdGlvbnxlbnwwfHwwfHx8MA%3D%3D"
+                    src="https://plus.unsplash.com/premium_vector-1741379223270-2f95b1a2e049?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDV8fG5vbiUyMHByb2ZpdCUyMG9yZ2FuaXphdGlvbiUyMGZpZ2h0aW5nJTIwYWdhaW5zdCUyMGd1biUyMHZpb2xlbmNlfGVufDB8fDB8fHww"
                     height={500}
                     width={500}
                     alt="protest"
