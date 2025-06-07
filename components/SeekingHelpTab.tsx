@@ -33,7 +33,6 @@ import { TabsContent } from "@/components/ui/tabs";
 import { useAdminSurveys } from "@/hooks/useAdminSurveys";
 import { Checkbox } from "./ui/checkbox";
 import Image from "next/image";
-import { thankyou } from "@/assets";
 
 const SeekingHelpTab = () => {
   const { addSurvey } = useAdminSurveys();
