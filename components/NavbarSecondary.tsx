@@ -1,5 +1,5 @@
 import React from "react";
-import ChangeTheNarrative333Logo from "@/assets/ChangeTheNarrative333Logo";
+import ChangeTheNarrative333Logo from "@/public/assets/ChangeTheNarrative333Logo";
 import Link from "next/link";
 
 const NavbarSecondary = () => {

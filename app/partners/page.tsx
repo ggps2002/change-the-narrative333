@@ -1,9 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import BlackVotesMatter from "@/assets/partners/BlackVotesMatter";
-import Reform from "@/assets/partners/Reform";
-import { logoSVG, nami } from "@/assets";
+import BlackVotesMatter from "@/public/assets/partners/BlackVotesMatter";
 
 // Partner data - replace with your actual partners
 const partners = [
@@ -34,7 +32,7 @@ incarceration—especially for women of color.`,
   {
     id: 3,
     name: "National Alliance on Mental Illness (NAMI)",
-    logo: nami,
+    logo: "/assets/partners/nami-logo.png",
     category: "Research & Policy",
     description: `The National Alliance on Mental Illness (NAMI) is the United States' largest grassroots mental 
 health organization dedicated to building better lives for individuals affected by mental illness. 
@@ -60,7 +58,7 @@ organization provides critical life skills training in areas like career readine
 planning, health, mental wellness, tenant rights, and relationship building. Their holistic 
 approach connects individuals to essential community resources while fostering confidence, 
 independence, and leadership through interactive programming and community engagement.`,
-    website: "https://example.com",
+    website: "",
     partnership_since: "2025",
   },
   {
@@ -82,7 +80,7 @@ systems of public safety that are rooted in equity, transparency, and public tru
   {
     id: 6,
     name: "REFORM Alliance ",
-    logo: Reform,
+    logo: '/assets/partners/Reform.svg',
     category: "Economic Empowerment",
     description: `REFORM Alliance is a national nonprofit organization committed to transforming probation, 
 parole, and the broader criminal justice system in the United States. Co-founded by leaders in 
@@ -101,7 +99,7 @@ const PartnerCard = ({ partner }: { partner: (typeof partners)[0] }) => (
   <div className="w-full bg-white border-t border-b border-gray-200 py-8 px-4 sm:px-8 lg:px-16 hover:bg-gray-50 transition-all duration-300">
     <div className="flex flex-col md:flex-row md:items-center gap-6">
       {/* Logo */}
-      <div className="flex-shrink-0 w-64 h-64 bg-[#5c5120] rounded-full overflow-hidden flex items-center justify-center mx-auto md:mx-0">
+      <div className="flex-shrink-0 w-64 h-64 bg-[#E2E8F0] rounded-full overflow-hidden flex items-center justify-center mx-auto md:mx-0">
         {typeof partner.logo === "function" ? (
           <partner.logo className="w-28 h-28 object-contain" />
         ) : partner.logo ? (
@@ -135,7 +133,7 @@ const PartnerCard = ({ partner }: { partner: (typeof partners)[0] }) => (
           <span className="mt-2 md:mt-0">
             Partner since {partner.partnership_since}
           </span>
-          <a
+          { partner.website && <a
             href={partner.website}
             target="_blank"
             rel="noopener noreferrer"
@@ -155,7 +153,7 @@ const PartnerCard = ({ partner }: { partner: (typeof partners)[0] }) => (
                 d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
               />
             </svg>
-          </a>
+          </a>}
         </div>
       </div>
     </div>
@@ -180,7 +178,7 @@ const page = () => {
           <div className="container-custom">
             <Link href="/" className=" text-white">
               <Image
-                src={logoSVG}
+                src="/assets/logo.svg"
                 height={140}
                 width={140}
                 alt="logo"

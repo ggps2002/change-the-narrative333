@@ -1,13 +1,12 @@
 import Link from "next/link";
 import { ArrowRight, Award, BookOpen, Calendar, Heart } from "lucide-react";
 import Image from "next/image";
-import { founder } from "@/assets";
 
 const About = () => {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="bg-[#3A3426] text-white py-16">
+      <section className="bg-primary text-white py-16">
         <div className="container-custom">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -31,7 +30,7 @@ const About = () => {
               <div className="prose max-w-none">
                 {/* Image */}
                 <Image
-                  src={founder} // or use `Image` if you're using Next.js
+                  src='/assets/founder.jpg' // or use `Image` if you're using Next.js
                   alt="Christian Gant-Madison"
                   width={300}
                   height={300}
@@ -203,7 +202,7 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-[#FFF5ED]">
+      <section className="py-16 bg-[#F7F3EB]">
         <div className="container-custom text-center">
           <div className="max-w-2xl mx-auto">
             <Heart className="h-16 w-16 mb-6 mx-auto text-gold" />

@@ -38,7 +38,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#3a3426] text-white">
+    <footer className="bg-primary text-white">
       <div className="container-custom py-12">
         {/* Newsletter Section */}
         <div className="mb-12">

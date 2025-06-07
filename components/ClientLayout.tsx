@@ -13,6 +13,7 @@ export default function ClientLayout({
 }) {
   const pathname = usePathname();
   const isBlogPostPage = /^\/blog\/[^/]+$/.test(pathname);
+  const isDonationSuccessPage = pathname === "/donate/success";
 
   // Routes where both secondary navbar and footer show
   const isSecondaryLayoutRoute =
@@ -25,8 +26,8 @@ export default function ClientLayout({
 
   return (
     <div className="flex flex-col min-h-screen">
-      {isBlogPostPage ? (
-        // Blog post pages: NavbarSecondary + Footer (primary)
+      {isBlogPostPage || isDonationSuccessPage ? (
+        // Blog post pages & Donation Success: NavbarSecondary + FooterSecondary
         <div className="w-full max-h-[7rem] overflow-hidden">
           <NavbarSecondary />
         </div>
@@ -43,10 +44,11 @@ export default function ClientLayout({
       {/* Main content grows to fill space */}
       <main className="flex-1">{children}</main>
 
-      {isBlogPostPage || !isSecondaryLayoutRoute ? (
-        <Footer />
-      ) : (
+      {isBlogPostPage || isDonationSuccessPage || isSecondaryLayoutRoute ? (
+        // Show FooterSecondary on donation success too
         <FooterSecondary />
+      ) : (
+        <Footer />
       )}
     </div>
   );

@@ -28,7 +28,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 z-50 w-screen ${
-        isScrolled ? "bg-[#3a3426] z-50 " : "bg-transparent"
+        isScrolled ? "bg-primary z-50 " : "bg-transparent"
       }`}
     >
       <div className="container-custom py-4 w-screen">

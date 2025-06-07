@@ -6,7 +6,8 @@ import { Heart, CheckCircle2, Users } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useAdminDonation } from "@/hooks/useAdminDonation";
-import BuyMeACoffeeButton from "./BuyMeACoffee";
+import DonateButton from "./DonateButton";
+// import BuyMeACoffeeButton from "./BuyMeACoffee";
 
 // Define the Impact type if not imported from elsewhere
 type Impact = {
@@ -191,10 +192,10 @@ const Donate = () => {
               </CardHeader>
               <CardContent className="py-10 flex flex-col items-center justify-center text-center space-y-6">
                 <p className="text-lg text-gray-700 max-w-md">
-                  Support us directly through BuyMeACoffee — it’s secure,
+                  Support us directly through PayPal — it’s secure,
                   simple, and appreciated!
                 </p>
-                <BuyMeACoffeeButton />
+                <DonateButton/>
               </CardContent>
             </Card>
 

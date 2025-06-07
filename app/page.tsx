@@ -1,8 +1,7 @@
 "use client";
 
-import { logoSVG, nami } from "@/assets";
-import BlackVotesMatter from "@/assets/partners/BlackVotesMatter";
-import Reform from "@/assets/partners/Reform";
+import BlackVotesMatter from "@/public/assets/partners/BlackVotesMatter"
+import Reform from "@/public/assets/partners/Reform";
 import { ArrowRight, ChevronDown, ChevronUp } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -21,7 +20,7 @@ export default function Home() {
               className=" text-white"
             >
               <Image
-                src={logoSVG}
+                src="/assets/logo.svg"
                 height={140}
                 width={140}
                 alt="logo"
@@ -34,7 +33,7 @@ export default function Home() {
         <div
           className="absolute inset-0 bg-cover bg-center z-0"
           style={{
-            backgroundImage: `url(https://www.visitphilly.com/wp-content/uploads/2023/06/City-Hall-City-Council-Caucus-Room-by-by-M-Edlow-for-Philadelphia-Visitor-Center-Corporation-1200x900px.jpg)`,
+            backgroundImage: `url(/assets/heroImage.jpg)`,
           }}
         >
           <div className="absolute inset-0 bg-black/50" />
@@ -181,7 +180,7 @@ export default function Home() {
       </section>
 
       {/* Bold Mission Section - Large Typography */}
-      <section className="py-16 bg-[#FFF5ED]">
+      <section className="py-16 bg-[#F7F3EB]">
         <div className="container-custom">
           <div className="md:flex md:items-start md:gap-12">
             <div className="md:w-2/3">
@@ -276,7 +275,7 @@ export default function Home() {
                   </div>
                   <div className="flex flex-col items-center">
                     <div className="w-16 h-16 bg-[#0C64A0] p-2 rounded-full flex items-center justify-center mb-2">
-                      <Image src={nami} height={100} width={100} alt="nami" />
+                      <Image src="/assets/partners/nami-logo.png" height={100} width={100} alt="nami" />
                     </div>
                   </div>
                   <div className="flex flex-col items-center">
@@ -393,7 +392,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section - Two Column Layout */}
-      <section className="py-16 bg-[#FFF5ED]">
+      <section className="py-16 bg-[#F8FAFC]">
         <div className="container-custom">
           <div className="md:flex">
             <div className="md:w-1/2 flex flex-col justify-around">
