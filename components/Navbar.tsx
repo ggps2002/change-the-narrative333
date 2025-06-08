@@ -97,7 +97,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden w-screen absolute top-0 left-0 bg-[#3A3426] px-6 py-4 space-y-4 z-30 shadow-md">
+          <div className="md:hidden w-screen absolute top-0 left-0 bg-primary px-6 py-4 space-y-4 z-30 shadow-md">
             <Link
               href="/"
               className="block text-gray-300 hover:text-white font-medium py-2 transition-colors duration-300"
