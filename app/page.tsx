@@ -53,7 +53,7 @@ export default function Home() {
       {/* Overlapping Typography Box with blend mode */}
       <div className="md:-mt-[3rem] lg:-mt-[4.8rem] -mt-[2.5rem] z-10 relative">
         <div className="container-custom">
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-black uppercase mb-4 tracking-tight">
+          <h1 className="text-3xl md:text-5xl lg:text-7xl font-black uppercase mb-4 tracking-tight">
             <span className="text-white whitespace-nowrap">
               CHANGING NARRATIVES{" "}
             </span>

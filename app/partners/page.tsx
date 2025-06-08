@@ -47,7 +47,7 @@ mental health equity nationwide.`,
   {
     id: 4,
     name: "Aniyiah’s Companions",
-    category: "Technology",
+    category: "Financial Literacy",
     description: `Aniyah’s Companions is a Philadelphia-based organization dedicated to empowering youth and 
 adults through comprehensive life skills and financial literacy education. The organization offers 
 hands-on support in areas such as banking, credit, budgeting, and money 

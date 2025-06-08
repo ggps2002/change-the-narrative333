@@ -102,7 +102,36 @@ const Donate = () => {
       {/* Donation Details & Alternative Support */}
       <section className="py-16 bg-gray-50">
         <div className="container-custom grid grid-cols-1 lg:grid-cols-5 gap-8">
+          {/* Left Column */}
+          <div className="lg:col-span-3 space-y-8">
+            {/* Main Donation Card */}
+            <Card className="border-0 shadow-lg">
+              <CardHeader>
+                <CardTitle className="text-xl">
+                  Start Local. Reach Global.
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="py-6 px-6 space-y-6">
+                <p className="text-lg text-gray-700">
+                  Change the Narrative 333 began with a mission to uplift urban
+                  communities—places often overlooked but full of potential.
+                  With your support, we can expand our impact beyond city limits
+                  to address social challenges around the world. Every donation
+                  helps create opportunity, drive healing, and build a more just
+                  future.
+                </p>
+                <p className="text-gray-700">
+                  Support us directly through PayPal — it’s secure, simple, and
+                  appreciated!
+                </p>
+                <DonateButton />
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Right Column */}
           <div className="lg:col-span-2 space-y-6">
+            {/* Allocation Card */}
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center">
@@ -112,6 +141,7 @@ const Donate = () => {
               </CardHeader>
               <CardContent>
                 <div className="space-y-6">
+                  {/* Direct Support */}
                   <div>
                     <div className="flex justify-between text-sm font-medium">
                       <span>Direct Support Services</span>
@@ -126,6 +156,8 @@ const Donate = () => {
                       />
                     </div>
                   </div>
+
+                  {/* Community Programs */}
                   <div>
                     <div className="flex justify-between text-sm font-medium">
                       <span>Community Programs</span>
@@ -142,6 +174,8 @@ const Donate = () => {
                       />
                     </div>
                   </div>
+
+                  {/* Operations */}
                   <div>
                     <div className="flex justify-between text-sm font-medium">
                       <span>Operations</span>
@@ -159,57 +193,12 @@ const Donate = () => {
                 </div>
               </CardContent>
             </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center">
-                  <CheckCircle2 className="h-5 w-5 mr-2 text-accent" />
-                  What Your Gift Provides
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  {content?.impacts.map((impact: Impact) => (
-                    <div
-                      key={impact.description}
-                      className="flex items-start gap-4"
-                    >
-                      <div className="text-2xl font-bold text-primary">
-                        ${impact.amount}
-                      </div>
-                      <p className="text-gray-700">{impact.description}</p>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="lg:col-span-3">
-            <Card className="border-0 shadow-lg">
-              <CardHeader className="text-xl ">
-                <CardTitle>Start Local. Reach Global.</CardTitle>
-              </CardHeader>
-              <CardContent className="py-6 flex flex-col px-6 justify-center space-y-6">
-                <p className="text-lg text-gray-700">
-                  Change the Narrative 333 began with a mission to uplift urban
-                  communities—places often overlooked but full of potential.
-                  With your support, we can expand our impact beyond city limits
-                  to address social challenges around the world. Every donation
-                  helps create opportunity, drive healing, and build a more just
-                  future.
-                </p>
-                <p>Support us directly through PayPal — it’s secure,
-                  simple, and appreciated!</p>
-                <DonateButton />
-              </CardContent>
-            </Card>
-
             {/* Other Ways to Support */}
-            <div className="mt-8">
+            <div>
               <h3 className="text-xl font-bold mb-4">Other Ways to Support</h3>
-              <div className="bg-white p-6 rounded-lg shadow">
-                <div className="flex items-start space-x-4 mb-4">
+              <div className="bg-white p-6 rounded-lg shadow space-y-6">
+                {/* Volunteer */}
+                <div className="flex items-start gap-4">
                   <Users className="h-6 w-6 text-secondary mt-1" />
                   <div>
                     <h4 className="font-semibold mb-1">Volunteer Your Time</h4>
@@ -228,7 +217,8 @@ const Donate = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
+                {/* Partner */}
+                <div className="flex items-start gap-4">
                   <Heart className="h-6 w-6 text-accent mt-1" />
                   <div>
                     <h4 className="font-semibold mb-1">Become a Partner</h4>

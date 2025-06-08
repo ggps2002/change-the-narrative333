@@ -5,6 +5,7 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import Image from "next/image";
 import { Loader2 } from "lucide-react";
+import Link from "next/link";
 
 export default function DonatePage() {
   const [amount, setAmount] = useState(5);
@@ -13,7 +14,7 @@ export default function DonatePage() {
 
   async function handleDonate() {
     setError("");
-    setIsLoading(true)
+    setIsLoading(true);
 
     if (amount < 5) {
       setError("Minimum donation is $5");
@@ -41,36 +42,18 @@ export default function DonatePage() {
       window.location.href = data.approvalUrl;
     } catch (err: any) {
       setError("Something went wrong. Please try again.");
-       setIsLoading(false);
+      setIsLoading(false);
     }
   }
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex items-center gap-2">
-        <strong>Amount: $</strong>
-        <Input
-          type="number"
-          min={5}
-          step={0.01}
-          value={amount > 5 ? amount : 5}
-          onChange={(e) => setAmount(parseFloat(e.target.value))}
-          className="w-16 h-10"
-        />
-      </div>
-      <Button onClick={handleDonate} className="w-full h-12">
-        {isLoading ? (
-            <>
-                <Loader2 className="w-4 h-4 animate-spin"/>
-                Please wait...
-            </>
-        ) : (
-          <>
-            <Image src="/assets/paypal.svg" alt="PayPal" height={30} width={30} />
-            Donate with PayPal
-          </>
-        )}
-      </Button>
+      <Link href="https://www.paypal.com/ncp/payment/8UR5V9V3ZCDV2">
+        <Button onClick={handleDonate} className="w-full h-12">
+          <Image src="/assets/paypal.svg" alt="PayPal" height={30} width={30} />
+          Donate with PayPal
+        </Button>
+      </Link>
 
       {error && <p style={{ color: "red" }}>{error}</p>}
     </div>

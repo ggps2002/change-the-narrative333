@@ -12,7 +12,7 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { ArrowRight, Calendar, Search, Tag, User } from "lucide-react";
+import { ArrowRight, Calendar, Loader2, Search, Tag, User } from "lucide-react";
 import { useAdminBlog } from "@/hooks/useAdminBlog";
 import Image from "next/image";
 import Link from "next/link";
@@ -97,7 +97,16 @@ const Blog = () => {
       {/* Blog Content */}
       <section className="py-16">
         <div className="container-custom">
-          <Tabs defaultValue="all">
+          {
+            loadingBlog ? (
+              <div className="flex justify-center items-center h-[500px]">
+                <div className="flex">
+                  <Loader2 className="w-7 h-7 animate-spin"/>
+                   <p className="text-lg">Loading Blogs...</p>
+                </div>
+              </div>
+            ) : (
+               <Tabs defaultValue="all">
             <div className="flex justify-between items-center mb-8">
               <TabsList>
                 <TabsTrigger value="all">All Articles</TabsTrigger>
@@ -129,6 +138,8 @@ const Blog = () => {
               />
             </TabsContent>
           </Tabs>
+            )
+          }
         </div>
       </section>
     </div>

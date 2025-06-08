@@ -29,13 +29,6 @@ const About = () => {
               </h2>
               <div className="prose max-w-none">
                 {/* Image */}
-                <Image
-                  src="/assets/founder.jpg" // or use `Image` if you're using Next.js
-                  alt="Christian Gant-Madison"
-                  width={300}
-                  height={300}
-                  className="object-cover mr-4 mb-4 sm:mb-0 float-left"
-                />
 
                 {/* Text */}
                 <p className="text-gray-700 text-base leading-relaxed">
@@ -119,11 +112,18 @@ const About = () => {
             </div>
 
             <div className="md:col-span-2 bg-gray-50 rounded-lg p-6">
-              <div className="aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg mb-6">
+              <div className="aspect-w-1 aspect-h-1 rounded-lg mb-6 text-center">
                 {/* Placeholder for founder image */}
-                <div className="flex items-center justify-center w-full h-full bg-primary/10 rounded-lg">
-                  <BookOpen className="h-20 w-20 text-primary/30" />
+                <div className="flex items-center justify-center w-full h-full rounded-lg mb-2">
+                  <Image
+                    src="/assets/founder.jpg" // or use `Image` if you're using Next.js
+                    alt="Christian Gant-Madison"
+                    width={430}
+                    height={300}
+                    className="object-cover rounded-lg"
+                  />
                 </div>
+                <em className="text-center">Christian Gant-Madison</em>
               </div>
 
               <div className="space-y-6">
@@ -209,7 +209,7 @@ const About = () => {
                 isLeft={true}
               />
 
-                <TimelineItem
+              <TimelineItem
                 year="June 2025"
                 title="Comprehensive Support Model "
                 content="Integrated survey system to match individuals with tailored resources and ongoing support."
