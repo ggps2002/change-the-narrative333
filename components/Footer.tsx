@@ -144,7 +144,7 @@ const Footer = () => {
             <address className="text-gray-300 not-italic text-sm space-y-1">
               <p>Email: admin@changethenarrative333.org</p>
               <p>Phone: 267-453-9416</p>
-              <p>Headquaters:  Philadelphia, PA</p>
+              <p>Headquarters:  Philadelphia, PA</p>
             </address>
             <div className="flex space-x-4 mt-4">
               <a href="#" aria-label="Facebook" className="hover:text-white">
