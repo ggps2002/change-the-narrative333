@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { redirect, useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -51,12 +51,10 @@ const Login = () => {
       );
       await reload(userCredential.user);
 
-      if (userCredential.user.emailVerified) {
-        router.push("/dashboard");
+      if (userCredential.user.email === "admin@changethenarrative333.org") {
+        router.push("/admin");
       } else {
-        setError(
-          "Email not verified. Please verify your email before logging in."
-        );
+        router.push("/dashboard");
       }
     } catch (err) {
       console.error("Login error:", err);
@@ -72,13 +70,8 @@ const Login = () => {
 
     try {
       await setPersistence(auth, browserLocalPersistence);
-      const result = await signInWithPopup(auth, provider);
-
-      if (result.user.email === "admin@changethenarrative333.org") {
-        router.push("/admin");
-      } else {
-        router.push("/dashboard");
-      }
+      await signInWithPopup(auth, provider);
+      router.push("/dashboard");
     } catch (err) {
       console.error("Google sign-in error:", err);
       setError("Google sign-in failed.");

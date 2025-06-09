@@ -51,8 +51,12 @@ const Register = () => {
         password
       );
 
-      await sendEmailVerification(userCredential.user);
-      router.push("/verify");
+      const userEmail = userCredential.user.email;
+      if (userEmail === "admin@changethenarrative333.org") {
+        router.push("/admin");
+      } else {
+        router.push("/dashboard");
+      }
       setIsLoading(false);
     } catch (err: any) {
       console.error("Registration error:", err);
