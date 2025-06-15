@@ -13,9 +13,9 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       {/* Hero Section - Bold, full-width with impactful typography */}
       <section className="relative md:h-[70vh] h-[40vh] w-full overflow-hidden">
-        <div className="relative z-10 -top-[4%] -left-[3%] md:-top-[6%] md:left-[10%] w-fit">
+        <div className="relative z-10 w-full">
           <div className="container-custom">
-            <Link href="/" className=" text-white">
+            <Link href="/" className="block w-fit">
               <Image
                 src="/assets/logo.svg"
                 height={140}
@@ -26,6 +26,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
+
         {/* Background Image Layer */}
         <div
           className="absolute inset-0 bg-cover bg-center z-0"
